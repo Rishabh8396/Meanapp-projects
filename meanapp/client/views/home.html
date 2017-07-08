@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <input type="text" placeholder="First Name" ng-model="User.FirstName" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Last Name" ng-model="User.LastName" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Email" ng-model="User.Email" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Contact" ng-model="User.Contact" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Age" ng-model="User.Age" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Country" ng-model="User.Country" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success" ng-click="RegisterUser()">Register</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Contact</th>
+          <th>Age</th>
+          <th>Country</th>
+        </tr>
+        <tr ng-repeat="x in UserDetails">
+          <td>{{x.FirstName}}</td>
+          <td>{{x.LastName}}</td>
+          <td>{{x.Email}}</td>
+          <td>{{x.Contact}}</td>
+          <td>{{x.Age}}</td>
+          <td>{{x.Country}}</td>
+          <td><button class="btn btn-danger" ng-click="DeleteUser(x)"><span class="glyphicon glyphicon-trash"></span></button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
